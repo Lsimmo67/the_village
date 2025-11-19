@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   # Pages routes
-  get 'families', to: 'pages#families'
+  resource :family, only: [:show, :new, :create, :edit, :update]
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
